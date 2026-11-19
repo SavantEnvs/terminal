@@ -1,0 +1,6 @@
+# .dockerignore for the commit-image build: bake in the FULL repo (including .git),
+# dropping only what mayhem/build.sh produces locally. (Upstream's top-level build/
+# directory is source, so it is NOT excluded.)
+mayhem/build/
+/fuzz_*
+ctrf-report.json

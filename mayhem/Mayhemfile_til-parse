@@ -1,0 +1,9 @@
+project: savantenvs/terminal
+target: til-parse
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/til-parse/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_til_parse
+    libfuzzer: true
+    timeout: 10

@@ -1,0 +1,9 @@
+project: savantenvs/terminal
+target: grapheme
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/grapheme/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_grapheme
+    libfuzzer: true
+    timeout: 10

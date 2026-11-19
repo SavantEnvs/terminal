@@ -1,0 +1,9 @@
+project: savantenvs/terminal
+target: u8u16
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/u8u16/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_u8u16
+    libfuzzer: true
+    timeout: 10

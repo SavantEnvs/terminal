@@ -1,0 +1,9 @@
+project: savantenvs/terminal
+target: vt-output
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/vt-output/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_vt_output
+    libfuzzer: true
+    timeout: 10

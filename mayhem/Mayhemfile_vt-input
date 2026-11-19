@@ -1,0 +1,9 @@
+project: savantenvs/terminal
+target: vt-input
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/vt-input/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_vt_input
+    libfuzzer: true
+    timeout: 10
